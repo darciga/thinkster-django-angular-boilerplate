@@ -4,7 +4,7 @@ from rest_framework import serializers
 from authentication.models import Account
 
 
-class AccountSerializers(serializers.ModelSerializer):
+class AccountSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=False)
     confirm_password = serializers.CharField(write_only=True, required=False)
 

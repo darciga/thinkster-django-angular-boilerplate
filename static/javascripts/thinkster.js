@@ -1,9 +1,20 @@
 angular
-    .module('thinkster', []);
+    .module('thinkster', [
+        'thinkster.config',
+        'thinkster.routes',
+        'thinkster.authentication'
+    ]);
+
+angular
+    .module('thinkster.config', []);
+
+angular
+    .module('thinkster.routes', ['ngRoute']);
 
 angular
     .module('thinkster')
     .run(run);
+
 run.$inject = ['$http'];
 /**
  * @name run
